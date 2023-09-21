@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+main {
+  background-size: 'cover';
+  background-position: 'center';
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#initial-page {
+  background-image: url('../assets/subtle-prism.svg');
+}
+
+.white-bg {
+  background-color: #fff;
+}
+
+#user-page {
+  background-image: url('../assets/base1.jpg');
+}
+
+#company-page {
+  background-image: url('../assets/base2.jpg');
+}
+
+.container {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  /* position: relative; */
+  /* perspective: 1000px; */
+}
+
+.card {
+  width: 250px;
+  z-index: 2;
+  height: 400px;
+  position: absolute;
+  top: 30%;
+  transform: translate(-50%) rotateY(0deg);
+  /* background: linear-gradient(90deg, snow 0px, #ddcdcd 5px); */
+  /* background-image: url('https://i.pinimg.com/564x/d5/de/9a/d5de9ac241efddd2276c1c2f498b115f.jpg'); */
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  /* font-family: 'Comic Sans MS', cursive; */
+  font-size: 12px;
+  text-align: center;
+  color: #333;
+  transition: transform 0.5s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* .card:last-child {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+} */
+
+.card-container:last-child {
+  background-color: aqua;
+}
+
+.card.stacked {
+  position: absolute;
+  top: 30%;
+  transform: translate(-50%) rotate(8deg);
+  z-index: 0;
+}
+
+.card.stacked.last {
+  transform: translate(-50%) rotate(-16deg);
+}
+
+/* .control-button {
+  width: 200px;
+  height: 40px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 20px;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.control-button:hover {
+  background-color: #555;
+}
+
+.control-button:active {
+  background-color: #111;
+} */
+
+.card-header {
+  font-family: 'Helvetica', sans-serif;
+  font-style: italic;
+  text-transform: uppercase;
+  padding: 10px;
+  text-align: center;
+  color: black;
+}
+
+.card-footer {
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 10px;
+  text-align: center;
+  margin-top: 10px;
+}
