@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { PREGUNTAS_PERSONAS } from '@/utils/preguntas'
 import SuscribeModal from '@/components/SuscribeModal'
 import Footer from '@/components/Footer'
@@ -18,8 +18,12 @@ export default function UserPage({
   const [counter, setCounter] = useState<number>(0)
   const [openModal, setOpenModal] = useState<string | undefined>()
   const [hasCompletedModal, setHasCompletedModal] = useState<boolean>(false)
+  const [emailFromLocalStorage, setEmailFromLocalStorage] = useState<string | null>('')
 
-  const emailFromLocalStorage: string | null = localStorage.getItem('email')
+
+  useEffect(() => {
+    setEmailFromLocalStorage(localStorage.getItem('email'))
+  }, [])
 
   const handleSuscribe = () => {
     if (counter === 4) {
