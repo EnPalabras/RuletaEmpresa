@@ -14,42 +14,38 @@ export default function Home() {
 
   return (
     <>
-      <div>
-        <div>
-          {activeStep === 0 && (
-            <InitialPage showModal={() => setOpenModal('form-elements')}>
-              <Stepper
-                activeStep={activeStep}
-                currentBg={currentBg}
-                setCurrentBg={setCurrentBg}
-              />
-              <InitModal
-                setCurrentStep={setActiveStep}
-                openModal={openModal}
-                setOpenModal={setOpenModal}
-              />
-            </InitialPage>
-          )}
-          {activeStep === 1 && (
-            <UserPage currentBg={currentBg}>
-              <Stepper
-                activeStep={activeStep}
-                currentBg={currentBg}
-                setCurrentBg={setCurrentBg}
-              />
-            </UserPage>
-          )}
-          {activeStep === 2 && (
-            <CompanyPage currentBg={currentBg}>
-              <Stepper
-                activeStep={activeStep}
-                currentBg={currentBg}
-                setCurrentBg={setCurrentBg}
-              />
-            </CompanyPage>
-          )}
-        </div>
-      </div>
+      {activeStep === 0 && (
+        <InitialPage showModal={() => setOpenModal('form-elements')}>
+          <Stepper
+            activeStep={activeStep}
+            currentBg={currentBg}
+            setCurrentBg={setCurrentBg}
+          />
+          <InitModal
+            setCurrentStep={setActiveStep}
+            openModal={openModal}
+            setOpenModal={setOpenModal}
+          />
+        </InitialPage>
+      )}
+      {activeStep === 1 && (
+        <UserPage currentBg={currentBg}>
+          <Stepper
+            activeStep={activeStep}
+            currentBg={currentBg}
+            setCurrentBg={setCurrentBg}
+          />
+        </UserPage>
+      )}
+      {activeStep === 2 && (
+        <CompanyPage currentBg={currentBg}>
+          <Stepper
+            activeStep={activeStep}
+            currentBg={currentBg}
+            setCurrentBg={setCurrentBg}
+          />
+        </CompanyPage>
+      )}
     </>
   )
 }
