@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { PREGUNTAS_PERSONAS } from '@/utils/preguntas'
-import SuscribeModal from '@/components/SuscribeModal'
+// import SuscribeModal from '@/components/SuscribeModal'
 import Footer from '@/components/Footer'
 import RandomCard from '@/components/RandomCard'
 
@@ -16,23 +16,24 @@ export default function UserPage({
   currentBg: boolean
 }) {
   const [counter, setCounter] = useState<number>(0)
-  const [openModal, setOpenModal] = useState<string | undefined>()
-  const [hasCompletedModal, setHasCompletedModal] = useState<boolean>(false)
-  const [emailFromLocalStorage, setEmailFromLocalStorage] = useState<string | null>('')
-
+  // const [openModal, setOpenModal] = useState<string | undefined>()
+  // const [hasCompletedModal, setHasCompletedModal] = useState<boolean>(false)
+  const [emailFromLocalStorage, setEmailFromLocalStorage] = useState<
+    string | null
+  >('')
 
   useEffect(() => {
     setEmailFromLocalStorage(localStorage.getItem('email'))
   }, [])
 
   const handleSuscribe = () => {
-    if (counter === 4) {
-      if (!hasCompletedModal) {
-        setOpenModal('form-elements')
-        setHasCompletedModal(true)
-        return
-      }
-    }
+    // if (counter === 4) {
+    //   if (!hasCompletedModal) {
+    //     setOpenModal('form-elements')
+    //     setHasCompletedModal(true)
+    //     return
+    //   }
+    // }
 
     setCounter(counter + 1) // Hacer validaciones para que el modal
     // no se muestre en caso que el usuario esté suscripto
@@ -70,9 +71,9 @@ export default function UserPage({
       }
     >
       {children}
-      {counter === 4 && (
+      {/* {counter === 4 && (
         <SuscribeModal openModal={openModal} setOpenModal={setOpenModal} />
-      )}
+      )} */}
       <RandomCard typeUser="USER" cardsShown={cardsShown} counter={counter} />
       <div
         style={{
