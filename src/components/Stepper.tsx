@@ -12,7 +12,7 @@ export default function Stepper({
   return (
     <>
       <div
-        className={`flex flex-row justify-between items-center w-full py-6 mb-10 md:py-0
+        className={`flex flex-row justify-between items-center w-full py-6 md:py-0
           ${activeStep === 0 && 'justify-center'}
       `}
       >
