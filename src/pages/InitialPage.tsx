@@ -10,7 +10,7 @@ export default function InitialPage({
 }) {
   return (
     <main
-      className={`flex-col justify-between max-h-screen
+      className={`flex-col justify-between
     `}
       id="initial-page"
     >
@@ -18,7 +18,7 @@ export default function InitialPage({
       <ShowCards />
       <div
         style={{
-          flex: 0.9,
+          flex: 0.8,
         }}
       />
       <Footer

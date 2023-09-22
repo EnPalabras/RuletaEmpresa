@@ -47,8 +47,6 @@ main {
   position: absolute;
   top: 30%;
   transform: translate(-50%) rotateY(0deg);
-  /* background: linear-gradient(90deg, snow 0px, #ddcdcd 5px); */
-  /* background-image: url('https://i.pinimg.com/564x/d5/de/9a/d5de9ac241efddd2276c1c2f498b115f.jpg'); */
   background-color: #fff;
   border-radius: 10px;
   display: flex;
@@ -62,14 +60,6 @@ main {
   color: #333;
   transition: transform 0.5s;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-/* .card:last-child {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-} */
-
-.card-container:last-child {
-  background-color: aqua;
 }
 
 .card.stacked {
