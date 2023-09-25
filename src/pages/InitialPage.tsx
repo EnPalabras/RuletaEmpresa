@@ -10,17 +10,17 @@ export default function InitialPage({
 }) {
   return (
     <main
-      className={`flex-col justify-between
+      className={`flex justify-between flex-col h-[calc(100dvh)]
     `}
       id="initial-page"
     >
       {children}
       <ShowCards />
-      <div
+      {/* <div
         style={{
-          flex: 0.8,
+          flex: 3 / 4,
         }}
-      />
+      /> */}
       <Footer
         buttonAction={() => {
           showModal()

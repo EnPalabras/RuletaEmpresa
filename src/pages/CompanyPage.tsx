@@ -63,7 +63,7 @@ export default function CompanyPage({
 
   return (
     <main
-      className="min-h-screen flex-col justify-between"
+      className="flex justify-between flex-col h-[calc(100dvh)]"
       id={
         currentBg
           ? 'company-page'
@@ -79,11 +79,7 @@ export default function CompanyPage({
         cardsShown={cardsShown}
         counter={counter}
       />
-      <div
-        style={{
-          flex: 1,
-        }}
-      />
+
       <Footer
         buttonAction={() => {
           handleSuscribe()

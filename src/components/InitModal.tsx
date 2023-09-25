@@ -54,6 +54,8 @@ export default function InitModal({
       }
     } catch (error) {
       console.log(error)
+    } finally {
+      setOpenModal(undefined)
     }
   }
 
@@ -73,14 +75,14 @@ export default function InitModal({
               Personaliza tu experiencia
             </p>
             <div
-              className={`flex flex-row justify-around items-center 
+              className={`flex flex-col md:flex-row justify-around md:items-center gap-6 px-4 select-none
             
             `}
             >
-              <div className="flex flex-row gap-2 items-center ">
+              <div className="flex flex-row gap-2 items-center">
                 <Checkbox
                   id="empresa"
-                  className={`focus:ring-0 focus:border-none border-none
+                  className={`focus:ring-0 focus:border-none border-none 
                     ${error && 'border-solid border-2 border-red-500'}
                   `}
                   checked={checked.type === 'empresa' ? checked.checked : false}

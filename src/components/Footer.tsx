@@ -30,11 +30,11 @@ const TikTokIcon = () => {
       width="38"
       height="38"
       viewBox="0 0 24 24"
-      stroke-width="2"
+      strokeWidth="2"
       stroke="currentColor"
       fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
       <path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z"></path>
@@ -50,31 +50,25 @@ export default function Footer({
   buttonText?: string
 }) {
   return (
-    <footer className="flex justify-end items-end mb-2 flex-col gap-4">
+    <footer className="flex mb-2 flex-col gap-4 select-none">
       <div className="w-full flex justify-center">
         <button
           onClick={buttonAction}
-          className="bg-[#AFB0DE] min-w-[300px] text-2xl text-center uppercase px-10 py-4 hover:opacity-90 text-white font-bold  rounded mx-auto"
+          className="bg-[#AFB0DE] min-w-[350px] text-4xl text-center uppercase px-12 py-4 hover:opacity-90 text-white font-bold  rounded mx-auto"
         >
           {buttonText}
         </button>
       </div>
-      <div className="flex flex-row justify-between items-center text-[#AFB0DE] text-purple-900 gap-6 mr-8">
+      <div className="flex flex-row justify-end items-end text-[#AFB0DE] text-purple-900 gap-6 mr-8">
         <div className="flex flex-row justify-around items-center text-black">
           <Link href="https://www.instagram.com/enpalabrass/">
             <InstagramIcon />
           </Link>
-          {/* <p>
-            <a href="https://www.instagram.com/enpalabrass/">@enpalabrass</a>
-          </p> */}
         </div>
         <div className="flex flex-row justify-around items-center text-black">
           <Link href="https://www.tiktok.com/enpalabrass">
             <TikTokIcon />
           </Link>
-          {/* <p>
-            <a href="https://www.instagram.com/enpalabrass/">@enpalabrass</a>
-          </p> */}
         </div>
       </div>
     </footer>

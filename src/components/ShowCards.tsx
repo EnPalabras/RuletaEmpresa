@@ -1,6 +1,6 @@
 export default function ShowCards() {
   return (
-    <div className="container">
+    <div className="container select-none">
       <div className="card-container">
         <div className="card">
           <div className="flex h-full items-center justify-center">

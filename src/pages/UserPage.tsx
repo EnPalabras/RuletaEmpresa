@@ -8,6 +8,8 @@ import RandomCard from '@/components/RandomCard'
 
 const cardsShown: string[] = ['Lanza una nueva carta para empezar a jugar']
 
+// MAKE DEBOUNCER
+
 export default function UserPage({
   children,
   currentBg,
@@ -63,7 +65,7 @@ export default function UserPage({
 
   return (
     <main
-      className="min-h-screen flex-col justify-between"
+      className="flex justify-between flex-col h-[calc(100dvh)]"
       id={
         currentBg
           ? 'user-page'
@@ -75,11 +77,7 @@ export default function UserPage({
         <SuscribeModal openModal={openModal} setOpenModal={setOpenModal} />
       )} */}
       <RandomCard typeUser="USER" cardsShown={cardsShown} counter={counter} />
-      <div
-        style={{
-          flex: 1,
-        }}
-      />
+
       <Footer
         buttonAction={() => {
           handleSuscribe()

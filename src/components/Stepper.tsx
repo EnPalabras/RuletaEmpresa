@@ -1,26 +1,51 @@
 import { ToggleSwitch } from 'flowbite-react'
 
+const BackIcon = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="icon icon-tabler icon-tabler-arrow-back"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      strokeWidth="2"
+      stroke="currentColor"
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M9 11l-4 4l4 4m-4 -4h11a4 4 0 0 0 0 -8h-1"></path>
+    </svg>
+  )
+}
+
 export default function Stepper({
   activeStep,
   currentBg,
   setCurrentBg,
+  setActiveStep,
 }: {
   activeStep: number
   currentBg: boolean
   setCurrentBg: (type: boolean) => void
+  setActiveStep(step: number): void
 }) {
   return (
     <div
-      className={`flex flex-row justify-between items-center w-full py-6 md:py-0
+      className={`flex select-none flex-row justify-between items-center w-full pt-6 md:pt-0
           ${activeStep === 0 && 'justify-center'}
       `}
     >
       <div
-        className={`w-1/3 flex justify-center
+        className={`w-1/3 flex justify-center cursor-pointer
         ${activeStep === 0 && 'hidden'}
         `}
+        onClick={() => {
+          setActiveStep(0)
+        }}
       >
-        <button>Hola</button>
+        <BackIcon />
       </div>
       <div className="w-1/3 mx-auto">
         <img
@@ -48,20 +73,3 @@ export default function Stepper({
     </div>
   )
 }
-
-//  ;<ul className="flex flex-wrap mx-20 w-1/3">
-//    {TYPE_USER.map((typeUser) => (
-//      <li className="mr-2" key={typeUser.id}>
-//        <div
-//          className={`inline-block p-4 border-transparent rounded-t-lg text-white cursor-pointer ${
-//            currentStep === typeUser.id
-//              ? 'text-blue-600 border-blue-600 border-b-2 bg-blue-400'
-//              : ''
-//          }`}
-//          onClick={() => setCurrentStep(typeUser.id)}
-//        >
-//          {typeUser.name}
-//        </div>
-//      </li>
-//    ))}
-//  </ul>

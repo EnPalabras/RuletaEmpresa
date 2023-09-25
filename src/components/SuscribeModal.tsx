@@ -1,7 +1,34 @@
 'use client'
 
 import { Label, Modal, TextInput } from 'flowbite-react'
+import Link from 'next/link'
 import { useState } from 'react'
+
+const CloseIcon = ({
+  onClick,
+}: {
+  onClick: (e: React.MouseEvent<SVGSVGElement, MouseEvent>) => void
+}) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="icon icon-tabler icon-tabler-x cursor-pointer"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      strokeWidth="2"
+      stroke="currentColor"
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      onClick={onClick}
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M18 6l-12 12"></path>
+      <path d="M6 6l12 12"></path>
+    </svg>
+  )
+}
 
 export default function SuscribeModal({
   openModal,
@@ -21,52 +48,73 @@ export default function SuscribeModal({
     alert('Suscripción exitosa con el mail' + email)
   }
 
-  console.log(props.openModal)
-
   return (
     <>
       <Modal
         show={props.openModal === 'form-elements'}
-        size="md"
+        size="xl"
         popup
         onClose={() => props.setOpenModal(undefined)}
         className="py-[25%]"
       >
-        {/* <Modal.Header /> */}
-        <Modal.Body className="bg-[#AFB0DE] rounded-md pt-3 pb-10">
-          <div className="space-y-10 mt-8">
-            <h3 className="text-xl font-medium text-gray-900 dark:text-white">
-              Suscribite a En Palabras
-            </h3>
-            <p className="text-gray-500 dark:text-gray-400 text-sm text-justify">
-              Obtené toda la información sobre nuestros productos y estate al
-              tanto de las novedades, bla, bla, bla.
-            </p>
-            <div>
-              <div className="mb-2 block">
-                <Label htmlFor="email" value="Ingresa tu Email" />
-              </div>
-              <TextInput
-                id="email"
-                placeholder="name@company.com"
-                required
-                onChange={(e) => props.setEmail(e.target.value)}
-              />
-            </div>{' '}
-            <div className="w-full flex flex-col gap-4 justify-around">
-              <button
-                className="bg-blue-500 hover:bg-blue-700 rounded-md py-2 text-white"
-                onClick={suscribeUser}
+        {/* <Modal.Header  /> */}
+        <Modal.Body className="bg-[#AFB0DE] p-2 pt-0 rounded-md  h-full">
+          <div className="absolute top-5 right-5">
+            <CloseIcon onClick={() => props.setOpenModal(undefined)} />
+          </div>
+          <div
+            className="flex flex-col py-2 md:flex-row h-full"
+            style={{
+              height: '100%',
+            }}
+          >
+            <div
+              className="w-full md:w-3/5 order-2 px-6 md:px-2 py-4 md:py-4 md:order-1  
+             gap-8 text-center"
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                height: '100%',
+              }}
+            >
+              <h4
+                className="
+                 text-md md:text-sm
+              "
               >
-                Suscribirme
-              </button>
-              <button
-                className="bg-gray-200 hover:bg-gray-300 rounded-md py-2 text-gray-800"
-                onClick={continuePlaying}
-              >
-                En otro momento
-              </button>
+                ¿Estás conectando con estas preguntas?
+              </h4>
+              <p className="text-md">
+                ¿Sabías que realizamos <b>cartas personalizadas</b> y opciones
+                de <b>venta al por mayor</b>?
+              </p>
+
+              <p className="text-md">
+                <b>
+                  Podemos ser tu próximo regalo empresarial, hecho a tu medida
+                </b>
+              </p>
+              <Link href="/contacto">
+                <button
+                  className="bg-[#F2F2F2] text-gray-900 text-sm text-center px-8 py-2 hover:opacity-90 rounded mx-auto
+                  shadow-lg
+                
+                "
+                >
+                  Conocer más
+                </button>
+              </Link>
             </div>
+            <div
+              className="w-full rounded-md min-h-[200px] md:min-h-[300px] bg-cover bg-center 
+              order-1 md:order-2 md:w-2/5
+              "
+              style={{
+                backgroundImage:
+                  "url('https://acdn.mitiendanube.com/stores/001/705/915/products/desconectados-juego-de-cartas1-be1607a577a92e29f916685182179084-1024-1024.jpg')",
+              }}
+            ></div>
           </div>
         </Modal.Body>
       </Modal>

@@ -3,7 +3,7 @@
 import CompanyPage from '@/pages/CompanyPage'
 import InitialPage from '@/pages/InitialPage'
 import UserPage from '@/pages/UserPage'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Stepper from '@/components/Stepper'
 import InitModal from '@/components/InitModal'
 
@@ -20,6 +20,7 @@ export default function Home() {
             activeStep={activeStep}
             currentBg={currentBg}
             setCurrentBg={setCurrentBg}
+            setActiveStep={setActiveStep}
           />
           <InitModal
             setCurrentStep={setActiveStep}
@@ -34,6 +35,7 @@ export default function Home() {
             activeStep={activeStep}
             currentBg={currentBg}
             setCurrentBg={setCurrentBg}
+            setActiveStep={setActiveStep}
           />
         </UserPage>
       )}
@@ -43,6 +45,7 @@ export default function Home() {
             activeStep={activeStep}
             currentBg={currentBg}
             setCurrentBg={setCurrentBg}
+            setActiveStep={setActiveStep}
           />
         </CompanyPage>
       )}
