@@ -42,6 +42,30 @@ const TikTokIcon = () => {
   )
 }
 
+const FormIcon = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="icon icon-tabler icon-tabler-file-spreadsheet"
+      width="38"
+      height="38"
+      viewBox="0 0 24 24"
+      stroke-width="2"
+      stroke="currentColor"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+      <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"></path>
+      <path d="M8 11h8v7h-8z"></path>
+      <path d="M8 15h8"></path>
+      <path d="M11 11v7"></path>
+    </svg>
+  )
+}
+
 export default function Footer({
   buttonAction,
   buttonText,
@@ -54,21 +78,36 @@ export default function Footer({
       <div className="w-full flex justify-center">
         <button
           onClick={buttonAction}
-          className="bg-[#AFB0DE] min-w-[350px] text-4xl text-center uppercase px-12 py-4 hover:opacity-90 text-white font-bold  rounded mx-auto"
+          className="bg-[#AFB0DE] text-2xl md:text-4xl text-center uppercase px-12 py-4 hover:opacity-90 
+            text-white font-bold mx-auto 
+            max-w-[300px]
+          "
+          style={{
+            borderRadius: '10px',
+            letterSpacing: '4px',
+          }}
         >
           {buttonText}
         </button>
       </div>
-      <div className="flex flex-row justify-end items-end text-[#AFB0DE] text-purple-900 gap-6 mr-8">
-        <div className="flex flex-row justify-around items-center text-black">
-          <Link href="https://www.instagram.com/enpalabrass/">
-            <InstagramIcon />
+      <div className="flex flex-row justify-between">
+        <div className="ml-8">
+          <Link href="https://www.enpalabras.com.ar/">
+            <FormIcon />
           </Link>
         </div>
-        <div className="flex flex-row justify-around items-center text-black">
-          <Link href="https://www.tiktok.com/enpalabrass">
-            <TikTokIcon />
-          </Link>
+
+        <div className="flex flex-row justify-end items-end text-[#AFB0DE] text-purple-900 gap-6 mr-8">
+          <div className="flex flex-row justify-around items-center text-black">
+            <Link href="https://www.instagram.com/enpalabrass/">
+              <InstagramIcon />
+            </Link>
+          </div>
+          <div className="flex flex-row justify-around items-center text-black">
+            <Link href="https://www.tiktok.com/enpalabrass">
+              <TikTokIcon />
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

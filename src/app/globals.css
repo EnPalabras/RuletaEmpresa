@@ -21,7 +21,6 @@ main {
   /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
-  font-family: 'Comic Sans MS', cursive;
 }
 
 #initial-page {
@@ -69,7 +68,6 @@ main {
   justify-content: space-between;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  /* font-family: 'Comic Sans MS', cursive; */
   font-size: 12px;
   text-align: center;
   color: #333;
@@ -84,12 +82,19 @@ main {
   z-index: 0;
 }
 
+.card.stacked.second {
+  transform: translate(-50%) rotate(-4deg);
+}
+
+.card.stacked.third {
+  transform: translate(-45%) rotate(4deg);
+}
+
 .card.stacked.last {
-  transform: translate(-50%) rotate(-16deg);
+  transform: translate(-45%) rotate(-16deg);
 }
 
 .card-header {
-  font-family: 'Helvetica', sans-serif;
   font-style: italic;
   text-transform: uppercase;
   padding: 10px;
@@ -98,8 +103,7 @@ main {
 }
 
 .card-footer {
-  font-family: 'Comic Sans MS', cursive;
-  font-size: 10px;
+  font-size: 16px;
   text-align: center;
   margin-top: 10px;
 }

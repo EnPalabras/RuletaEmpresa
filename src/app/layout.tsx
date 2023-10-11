@@ -1,9 +1,12 @@
 import Footer from '@/components/Footer'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import localFont from 'next/font/local'
 
-const inter = Inter({ subsets: ['latin'] })
+const myFont = localFont({
+  src: './font/gothamRounded.ttf',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'Ruleta En Palabras',
@@ -16,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={myFont.className}>
+      <body>{children}</body>
     </html>
   )
 }

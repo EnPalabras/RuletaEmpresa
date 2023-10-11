@@ -33,7 +33,7 @@ export default function Stepper({
 }) {
   return (
     <div
-      className={`flex select-none flex-row justify-between items-center w-full pt-6 md:pt-0
+      className={`flex select-none flex-row justify-between items-center w-full pt-6
           ${activeStep === 0 && 'justify-center'}
       `}
     >
@@ -47,13 +47,12 @@ export default function Stepper({
       >
         <BackIcon />
       </div>
-      <div className="w-1/3 mx-auto">
-        <img
-          src="//acdn.mitiendanube.com/stores/001/705/915/themes/common/logo-406989337-1661261292-f275c90c94f38041bb3595811ed7d4b31661261293-320-0.webp"
-          alt="logo"
-          className="mx-auto"
-        />
-      </div>
+      <img
+        src="//acdn.mitiendanube.com/stores/001/705/915/themes/common/logo-406989337-1661261292-f275c90c94f38041bb3595811ed7d4b31661261293-320-0.webp"
+        alt="logo"
+        className="
+          w-1/3 max-w-[200px] mx-auto"
+      />
       <div
         className={`w-1/3 flex justify-center items-center
         ${activeStep === 0 && 'hidden'}

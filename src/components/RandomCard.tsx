@@ -57,13 +57,11 @@ export default function RandomCard({
                 }`,
               }}
             >
-              <div className="card-header text-base">
-                <span style={{ fontWeight: 700 }}>DES</span>CONECTADOS
-              </div>
+              <div className="card-header text-base"></div>
               {card && (
                 <p
                   className="mt-1 max-w-2xl
-                  px-6 
+                  px-6  font-light
                   text-lg text-gray-500"
                   style={{}}
                 >
@@ -78,6 +76,8 @@ export default function RandomCard({
         })}
 
         <div className="card stacked"></div>
+        <div className="card stacked second"></div>
+        <div className="card stacked third"></div>
         <div className="card stacked last"></div>
       </div>
     </div>

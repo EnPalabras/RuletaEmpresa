@@ -24,22 +24,10 @@ export default function ShowCards() {
           </div>
         </div>
         <div className="card stacked"></div>
+        <div className="card stacked second"></div>
+        <div className="card stacked third"></div>
         <div className="card stacked last"></div>
       </div>
     </div>
   )
 }
-
-//  ;<div className="container">
-//    <div className="card-container">
-//      <div className="card">
-//        <div className="card-header">
-//          <span style={{ fontWeight: 700 }}>DES</span>CONECTADOS
-//        </div>
-//        <p>Pregunta 1</p>
-//        <div className="card-footer">@enpalabrass</div>
-//      </div>
-//      <div className="card stacked"></div>
-//      <div className="card stacked"></div>
-//    </div>
-//  </div>
