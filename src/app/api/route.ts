@@ -9,6 +9,8 @@ interface Payload {
 }
 
 export async function POST(req: NextRequest, res: NextResponse) {
+  req.headers.set('Access-Control-Allow-Origin', '*')
+
   try {
     const data: Payload = await req.json()
 
