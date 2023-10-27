@@ -19,6 +19,8 @@ export async function POST(req: NextRequest, res: NextResponse) {
 
     const response = await appendData(data)
 
+    console.log(response)
+
     return new NextResponse(JSON.stringify({ message: 'Ok' }), {
       status: 200,
       headers: corsHeaders,
