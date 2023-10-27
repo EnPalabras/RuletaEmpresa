@@ -23,7 +23,7 @@ const googleSheets = google.sheets({
   auth: client,
 })
 
-export const appendData = async (values : any) => {
+export const appendData = async (values) => {
   try {
     googleSheets.spreadsheets.values.append({
       auth,
