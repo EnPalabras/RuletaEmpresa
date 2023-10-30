@@ -24,11 +24,12 @@ const googleSheets = google.sheets({
 })
 
 export const appendData = async (values) => {
+  console.log(values)
   try {
     googleSheets.spreadsheets.values.append({
       auth,
       spreadsheetId: VITE_GOOGLE_SHEET_ID,
-      range: 'Landing Empresas!A:L',
+      range: 'Landing!A1:L1',
       valueInputOption: 'USER_ENTERED',
       resource: {
         values: values,
