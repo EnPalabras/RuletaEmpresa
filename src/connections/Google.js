@@ -26,15 +26,17 @@ const googleSheets = google.sheets({
 export const appendData = async (values) => {
   console.log(values)
   try {
-    googleSheets.spreadsheets.values.append({
+    const res = googleSheets.spreadsheets.values.append({
       auth,
       spreadsheetId: VITE_GOOGLE_SHEET_ID,
-      range: 'Landing!A1:L1',
+      range: 'Landing',
       valueInputOption: 'USER_ENTERED',
       resource: {
         values: values,
       },
     })
+
+    console.log(res)
     return 'Ok'
   } catch (error) {
     return 'Error'
