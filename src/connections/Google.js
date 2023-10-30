@@ -25,8 +25,9 @@ const googleSheets = google.sheets({
 
 export const appendData = async (values) => {
   console.log(values)
+  console.log(VITE_GOOGLE_SHEET_ID)
   try {
-    const res = googleSheets.spreadsheets.values.append({
+    const res = await googleSheets.spreadsheets.values.append({
       auth,
       spreadsheetId: VITE_GOOGLE_SHEET_ID,
       range: 'Landing',
