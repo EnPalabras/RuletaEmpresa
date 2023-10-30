@@ -28,7 +28,7 @@ export const appendData = async (values) => {
     googleSheets.spreadsheets.values.append({
       auth,
       spreadsheetId: VITE_GOOGLE_SHEET_ID,
-      range: 'Landing Empresas!A',
+      range: 'Landing Empresas!A:L',
       valueInputOption: 'USER_ENTERED',
       resource: {
         values: values,
