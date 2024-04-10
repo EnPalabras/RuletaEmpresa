@@ -40,6 +40,7 @@ export const appendData = async (values) => {
     console.log(res)
     return 'Ok'
   } catch (error) {
+    console.log(error)
     return 'Error'
   }
 }
