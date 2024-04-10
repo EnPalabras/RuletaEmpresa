@@ -30,7 +30,7 @@ export const appendData = async (values) => {
     const res = await googleSheets.spreadsheets.values.append({
       auth,
       spreadsheetId: VITE_GOOGLE_SHEET_ID,
-      range: 'Landing',
+      range: 'NuevaLanding',
       valueInputOption: 'USER_ENTERED',
       resource: {
         values: values,
